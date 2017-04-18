@@ -7,28 +7,28 @@
 
 cd /home/scripts/cloudflare
 
-./dh.sh
-./mini.sh
+./dh.sh > /dev/null 2>&1
+./mini.sh > /dev/null 2>&1
 
 cd /home/scripts/dh-1
 
-./host.sh
+./host.sh > /dev/null 2>&1
 
 cd /home/scripts/dh-2
 
-./host.sh
+./host.sh > /dev/null 2>&1
 
 cd /home/scripts/dh-3
 
-./admin.sh
-./database.sh
-./download.sh
-./mail.sh
-./redirection.sh
-./solder.sh
-./webservers.sh
+./admin.sh > /dev/null 2>&1
+./database.sh > /dev/null 2>&1
+./download.sh > /dev/null 2>&1
+./mail.sh > /dev/null 2>&1
+./redirection.sh > /dev/null 2>&1
+./solder.sh > /dev/null 2>&1
+./webservers.sh > /dev/null 2>&1
 
 cd /home/scripts/external
 
-./discord.sh
-./status.sh
+./discord.sh > /dev/null 2>&1
+./status.sh > /dev/null 2>&1
