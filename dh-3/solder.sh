@@ -5,7 +5,7 @@
 #           status system              #
 #======================================#
 
-curl https://apt.fonix.online/spinner.sh | bash #Conection to Loader
+source "/home/scripts/spinner.sh" #Conection to Loader
 
 			 #=========#
 			 #Variables:
