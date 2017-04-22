@@ -4,31 +4,43 @@
 #Status Script for the Digital Hazards #
 #           status system              #
 #======================================#
+while [ true ]
+do
 
 cd /home/scripts/cloudflare
 
-./dh.sh > /dev/null 2>&1
-./mini.sh > /dev/null 2>&1
+./dh.sh
+./mini.sh
 
 cd /home/scripts/dh-1
 
-./host.sh > /dev/null 2>&1
+./host.sh
+
+cd /home/scripts/dh-1/mh-1
+
+./vm.sh
 
 cd /home/scripts/dh-2
 
-./host.sh > /dev/null 2>&1
+./host.sh
+
+cd /home/scripts/dh-2/mh-2
+
+./vm.sh
 
 cd /home/scripts/dh-3
 
-./admin.sh > /dev/null 2>&1
-./database.sh > /dev/null 2>&1
-./download.sh > /dev/null 2>&1
-./mail.sh > /dev/null 2>&1
-./redirection.sh > /dev/null 2>&1
-./solder.sh > /dev/null 2>&1
-./webservers.sh > /dev/null 2>&1
+./admin.sh
+./database.sh
+./download.sh
+./mail.sh
+./redirection.sh
+./solder.sh
+./webservers.sh
 
 cd /home/scripts/external
 
-./discord.sh > /dev/null 2>&1
-./status.sh > /dev/null 2>&1
+./discord.sh
+./status.sh
+sleep 10
+done
