@@ -39,13 +39,13 @@ API="Staytus API" #Name of the Status API
     		then
     			start_spinner '$SERVER $OFF'
     			sleep 2
-        		curl --header 'X-Auth-Token: 9beee57c-b389-4a6d-9926-3706339759a1' --header 'X-Auth-Secret: jWa2BtH40n7RzPV8MaXU1lH3PMQPwZ' -H "Content-Type: application/json" -d '{"service":"dhio1","status":"major-outage"}' -v http://status.digitalhazards.net/api/v1/services/set_status > /dev/null 2>&1
+        		curl --header 'X-Auth-Token: OURKEY' --header 'X-Auth-Secret: OURKEYX' -H "Content-Type: application/json" -d '{"service":"dhio1","status":"major-outage"}' -v http://status.digitalhazards.net/api/v1/services/set_status > /dev/null 2>&1
          		 stop_spinner $?
     		elif [ $CS -eq 0 ]
     		then
     			start_spinner '$SERVER $ON'
         		sleep 2
-        		curl --header 'X-Auth-Token: 9beee57c-b389-4a6d-9926-3706339759a1' --header 'X-Auth-Secret: jWa2BtH40n7RzPV8MaXU1lH3PMQPwZ' -H "Content-Type: application/json" -d '{"service":"dhio1","status":"operational"}' -v http://status.digitalhazards.net/api/v1/services/set_status > /dev/null 2>&1
+        		curl --header 'X-Auth-Token: OURKEY' --header 'X-Auth-Secret: OURKEYX' -H "Content-Type: application/json" -d '{"service":"dhio1","status":"operational"}' -v http://status.digitalhazards.net/api/v1/services/set_status > /dev/null 2>&1
         		 stop_spinner $?
     	fi
 
